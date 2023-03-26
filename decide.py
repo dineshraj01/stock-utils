@@ -69,7 +69,6 @@ stocks = {
 
 print("========= Generating report for : {} ==========".format(dt.datetime.now()))
 print()
-print()
 
 decisionList = []
 for symbol in stocks:
