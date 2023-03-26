@@ -64,7 +64,16 @@ stocks = {
     'SBIN.NS' : 'State Bank of India',
     'IOC.NS' : 'Indian Oil Corporation Limited',
     'TITAN.NS' : 'Titan Company Limited',
-    'HAL.NS' : 'Hindustan Aeronautics Limited'
+    'HAL.NS' : 'Hindustan Aeronautics Limited',
+    'RELAXO.NS' : 'Relaxo Footwears Limited',
+    'ESCORTS.NS' : 'Escorts Kubota Limited',
+    'DEEPAKNTR.NS' : 'DEEPAKNTR.NS',
+    'JSWENERGY.NS' : 'JSW Energy Limited',
+    'VBL.NS' : 'Varun Beverages Ltd',
+    'JINDALSTEL.NS' : 'Jindal Steel & Power Limited',
+    'ABBOTINDIA.NS' : 'ABBOTINDIA.NS',
+    'TATAELXSI.NS' : 'Tata Elxsi Ltd',
+    'HONAUT.NS' : 'Honeywell Automation India Limited'
 }
 
 print("========= Generating report for : {} ==========".format(dt.datetime.now()))
