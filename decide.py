@@ -73,7 +73,8 @@ stocks = {
     'JINDALSTEL.NS' : 'Jindal Steel & Power Limited',
     'ABBOTINDIA.NS' : 'ABBOTINDIA.NS',
     'TATAELXSI.NS' : 'Tata Elxsi Ltd',
-    'HONAUT.NS' : 'Honeywell Automation India Limited'
+    'HONAUT.NS' : 'Honeywell Automation India Limited',
+    'MSFT' : 'Microsoft Corporation'
 }
 
 print("========= Generating report for : {} ==========".format(dt.datetime.now()))
