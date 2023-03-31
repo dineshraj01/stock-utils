@@ -74,7 +74,9 @@ stocks = {
     'ABBOTINDIA.NS' : 'ABBOTINDIA.NS',
     'TATAELXSI.NS' : 'Tata Elxsi Ltd',
     'HONAUT.NS' : 'Honeywell Automation India Limited',
-    'MSFT' : 'Microsoft Corporation'
+    'MSFT' : 'Microsoft Corporation',
+    'HDFCBANK.NS' : 'HDFC Bank Limited',
+    'HINDUNILVR.NS' : 'Hindustan Unilever Limited'
 }
 
 print("========= Generating report for : {} ==========".format(dt.datetime.now()))
