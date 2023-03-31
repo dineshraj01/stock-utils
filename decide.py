@@ -85,7 +85,6 @@ stocks = {
     'LT.NS' : 'Larsen & Toubro Limited',
     'SUNPHARMA.NS' : 'Sun Pharmaceutical Industries Limited',
     'BAJAJFINSV.NS' : 'Bajaj Finserv Ltd.',
-    'ULTRACEMCO.NS' : 'UltraTech Cement Limited',
     'ONGC.NS' : 'Oil and Natural Gas Corporation Limited',
     'JSWSTEEL.NS' : 'JSW Steel Limited'
 }
@@ -98,7 +97,7 @@ for symbol in stocks:
     ema9, ema20, decision = should_buy(symbol)
     decisionList.append((ema9, ema20, stocks[symbol], decision))
 
-sortedList = sorted(decisionList, key=lambda x : (x[3], x[2]))
+sortedList = sorted(decisionList, key=lambda x : x[3], x[2]))
 
 for item in sortedList:
     ema1, ema2, stock, decision = item
