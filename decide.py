@@ -76,7 +76,18 @@ stocks = {
     'HONAUT.NS' : 'Honeywell Automation India Limited',
     'MSFT' : 'Microsoft Corporation',
     'HDFCBANK.NS' : 'HDFC Bank Limited',
-    'HINDUNILVR.NS' : 'Hindustan Unilever Limited'
+    'HINDUNILVR.NS' : 'Hindustan Unilever Limited',
+    'ICICIBANK.NS' : 'ICICI Bank Limited',
+    'HDFC.NS' : 'Housing Development Finance Corporation Limited',
+    'ITC.NS' : 'ITC Limited',
+    'BAJFINANCE.NS' : 'Bajaj Finance Limited',
+    'HCLTECH.NS' : 'HCL Technologies Limited',
+    'LT.NS' : 'Larsen & Toubro Limited',
+    'SUNPHARMA.NS' : 'Sun Pharmaceutical Industries Limited',
+    'BAJAJFINSV.NS' : 'Bajaj Finserv Ltd.',
+    'ULTRACEMCO.NS' : 'UltraTech Cement Limited',
+    'ONGC.NS' : 'Oil and Natural Gas Corporation Limited',
+    'JSWSTEEL.NS' : 'JSW Steel Limited'
 }
 
 print("========= Generating report for : {} ==========".format(dt.datetime.now()))
@@ -87,7 +98,7 @@ for symbol in stocks:
     ema9, ema20, decision = should_buy(symbol)
     decisionList.append((ema9, ema20, stocks[symbol], decision))
 
-sortedList = sorted(decisionList, key=lambda x : x[3])
+sortedList = sorted(decisionList, key=lambda x : (x[3], x[2]))
 
 for item in sortedList:
     ema1, ema2, stock, decision = item
