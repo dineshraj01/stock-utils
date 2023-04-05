@@ -16,8 +16,8 @@ def should_buy(stock_symbol, plotGraph = False):
     tickerDf = tickerData.history(period='1d', start=start_date, end=end_date)
 
     # Compute the 9-day and 20-day EMAs
-    ema1 = tickerDf['Close'].ewm(span=9, adjust=False).mean()
-    ema2 = tickerDf['Close'].ewm(span=30, adjust=False).mean()
+    ema1 = tickerDf['Close'].ewm(span=5, adjust=False).mean()
+    ema2 = tickerDf['Close'].ewm(span=15, adjust=False).mean()
 
     # Plot the closing prices and EMAs on a graph
     if plotGraph:
@@ -86,7 +86,8 @@ stocks = {
     'SUNPHARMA.NS' : 'Sun Pharmaceutical Industries Limited',
     'BAJAJFINSV.NS' : 'Bajaj Finserv Ltd.',
     'ONGC.NS' : 'Oil and Natural Gas Corporation Limited',
-    'JSWSTEEL.NS' : 'JSW Steel Limited'
+    'JSWSTEEL.NS' : 'JSW Steel Limited',
+    'MON100.NS' : 'Motilal Oswal NASDAQ 100 ETF'
 }
 
 print("========= Generating report for : {} ==========".format(dt.datetime.now()))
@@ -97,7 +98,7 @@ for symbol in stocks:
     ema9, ema20, decision = should_buy(symbol)
     decisionList.append((ema9, ema20, stocks[symbol], decision))
 
-sortedList = sorted(decisionList, key=lambda x : x[3], x[2]))
+sortedList = sorted(decisionList, key=lambda x : (x[3], x[2]))
 
 for item in sortedList:
     ema1, ema2, stock, decision = item
