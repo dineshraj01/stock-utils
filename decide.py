@@ -45,7 +45,6 @@ stocks = {
     'PARAS.NS' : 'Paras defence and space technology Ltd',
     'LATENTVIEW.NS' : 'Latent View Analytics Limited',
     'TATAMOTORS.NS' : 'Tata Motors Limited',
-    'VEDL.NS' : 'Vedanta Limited',
     'IRCTC.NS' : 'Indian Railway Catering & Tourism Corporation Limited',
     'PERSISTENT.NS' : 'Persistent Systems Limited',
     'ADANIGREEN.NS' : 'Adani Green Energy Limited',
@@ -55,7 +54,6 @@ stocks = {
     'TATACOFFEE.NS' : 'Tata Coffee Limited',
     'ADANIPORTS.NS' : 'Adani Ports and Special Economic Zone Limited',
     'ZOMATO.NS' : 'Zomato Limited',
-    'RUCHIRA.NS' : 'Ruchira papers',
     'ADANIPOWER.NS' : 'Adani Power Limited',
     'MTARTECH.NS' : 'MTAR Technologies Limited',
     'ADANITRANS.NS' : 'Adani Transmission Limited',
@@ -95,8 +93,8 @@ print()
 
 decisionList = []
 for symbol in stocks:
-    ema9, ema20, decision = should_buy(symbol)
-    decisionList.append((ema9, ema20, stocks[symbol], decision))
+    ema1, ema2, decision = should_buy(symbol)
+    decisionList.append((ema1, ema2, stocks[symbol], decision))
 
 sortedList = sorted(decisionList, key=lambda x : (x[3], x[2]))
 
